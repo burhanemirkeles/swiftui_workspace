@@ -42,6 +42,8 @@ struct ContentView: View {
                 .onSubmit {
                     var isNameAlreadyExists = names.contains(nameToAdd)
                     
+                    nameToAdd = nameToAdd.trimmingCharacters(in: .whitespacesAndNewlines)
+
                     if !nameToAdd.isEmpty, !isNameAlreadyExists {
                         names.append(nameToAdd)
                         nameToAdd = ""
