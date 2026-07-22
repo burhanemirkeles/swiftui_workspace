@@ -40,7 +40,7 @@ struct ContentView: View {
             TextField("Add Name", text: $nameToAdd)
                 .autocorrectionDisabled()
                 .onSubmit {
-                    var isNameAlreadyExists = names.contains(nameToAdd)
+                    let isNameAlreadyExists = names.contains(nameToAdd)
                     
                     nameToAdd = nameToAdd.trimmingCharacters(in: .whitespacesAndNewlines)
 
