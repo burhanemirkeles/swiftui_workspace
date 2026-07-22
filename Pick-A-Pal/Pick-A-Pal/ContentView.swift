@@ -40,8 +40,9 @@ struct ContentView: View {
             TextField("Add Name", text: $nameToAdd)
                 .autocorrectionDisabled()
                 .onSubmit {
-
-                    if !nameToAdd.isEmpty {
+                    var isNameAlreadyExists = names.contains(nameToAdd)
+                    
+                    if !nameToAdd.isEmpty, !isNameAlreadyExists {
                         names.append(nameToAdd)
                         nameToAdd = ""
                     }
