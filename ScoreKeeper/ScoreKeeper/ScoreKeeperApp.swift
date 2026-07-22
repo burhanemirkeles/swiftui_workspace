@@ -2,7 +2,7 @@
 //  ScoreKeeperApp.swift
 //  ScoreKeeper
 //
-//  Created by Infonal on 22.07.2026.
+//  Created by Emir Keles on 22.07.2026.
 //
 
 import SwiftUI
